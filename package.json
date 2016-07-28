@@ -1,0 +1,26 @@
+{
+  "name": "z-api",
+  "version": "0.1.0",
+  "description": "ZigBee high-level API",
+  "main": "index.js",
+  "scripts": {
+    "test-detail": "npm run unit && npm run integration",
+    "unit": "printf \"\nUNIT TESTS\n\"; istanbul cover --include-all-sources jasmine spec/**/unit/**/**/*Spec.js",
+    "integration": "printf \"\nINTEGRATION TESTS\n\"; istanbul cover --include-all-sources jasmine spec/**/integration/**/**/*Spec.js",
+    "test-coverage": "istanbul cover --include-all-sources --print summary jasmine",
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer-builder": "^0.2.0",
+    "istanbul": "^0.4.3",
+    "jasmine": "^2.4.1",
+    "proxyquire": "^1.7.9"
+  },
+  "dependencies": {
+    "q": "^1.4.1",
+    "serialport": "^3.1.2",
+    "xbee-api": "^0.4.3"
+  }
+}
